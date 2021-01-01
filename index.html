@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <h2>{% block title %} Добро пожаловать на страницу вашего персонального блога!{% endblock %}</h2>
+    <br>
+    {% for post in posts %}
+        <a href="{{ url_for('post', post_id=post['id']) }}">
+            <h2>{{ post['title'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ post['created'] }}</span>
+        <a href="{{ url_for('edit', id=post['id']) }}">
+            <span class="badge badge-warning">Редактировать</span>
+        </a>
+        <hr>
+    {% endfor %}
+{% endblock %}
