@@ -1,2 +1,1 @@
-# TechnoVirus
-Hacaton project
+# Pers.Journal
