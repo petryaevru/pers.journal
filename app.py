@@ -93,9 +93,9 @@ def delete(id):
     return redirect(url_for('index'))
 
 
-@app.route('/hello/<name>')
-def print_name(name):
-    return "{}, ты достиг пасхалки!".format(name)
+@app.route('/editor')
+def ckeditor(name):
+    return "Извните, редактор постов CKEditor для Pers.Journal находится в процессе разработки"
 
 
 @app.route('/about')
